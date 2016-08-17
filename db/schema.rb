@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150719115626) do
   create_table "subject_item_notes", force: :cascade do |t|
     t.integer  "value"
     t.integer  "subject_item_id"
+    t.integer 'student_id'
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -48,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150719115626) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "teacher_id"
+    t.integer 'student_id'
   end
 
   add_index "subject_items", ["teacher_id"], name: "index_subject_items_on_teacher_id", using: :btree
