@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :report_subjects
 
   get 'reports', to: 'reports#subjects'
+  get 'visitors', to: 'visitors#index'
 end
