@@ -13,6 +13,7 @@ feature 'User visits teachers page'  do
   scenario 'should see teachers list' do
     within('.breadcrumbs') do
       expect(page).to have_content 'RoR Workhops » Teachers'
+      RoR Workhops » Teachers
     end
 
     expect(page).to have_content 'Pies'
