@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   resources :teachers do
     get :subjects
   end
-  resources :report_subjects
+  # resources :report_subjects
 
-  get 'reports', to: 'reports#subjects'
+  get 'report_subjects', to: 'reports#subjects'
   get 'visitors', to: 'visitors#index'
 end
