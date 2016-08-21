@@ -1,21 +1,18 @@
 - breadcrumb :subjects
 .subjects
   List of subjects:
-  %table.table.table-condensed
-    - subject_items.each do |subject_item|
-      .subject-item
-        %table.table.table-condensed
+  - subject_items.each do |subject_item|
+    .subject-item
+      .title
+        = subject_item.decorate.title_with_assigned_teacher
+      %table.table.table-condensed
+        %thead
           %tr
-            = "#{subject_item.title} (#{subject_item.teacher.decorate.full_name})"
-
-
--#= link_to t('shared.add_new_item'), new_teacher_path, class: 'btn btn-default'
--#%table.table.table-condensed
--#  %thead
--#    %tr
--#      %th= t('teacher.columns.first_name')
--#      %th= t('teacher.columns.last_name')
--#      %th= t('teacher.columns.academic_title')
--#      %th= t('shared.actions')
--#  %tbody
--#    = render teachers
+            %th.full-name= t('subjects.columns.full_name')
+            %th.avg-notes= t('subjects.columns.avg_notes')
+        %tbody
+          - subject_item.students.each do |student|
+            -#- binding.pry
+            %tr
+              %td= student.decorate.full_name
+              %td= student.decorate.avg_notes(subject_item)

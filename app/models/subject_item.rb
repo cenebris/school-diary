@@ -7,5 +7,7 @@ class SubjectItem < ActiveRecord::Base
 
   validates :title, presence: true
 
+  accepts_nested_attributes_for :students
+
   scope :not_assigned_or_assigned_to_teacher, -> (teacher) { where('teacher_id IS ? or teacher_id = ?', nil, teacher) }
 end

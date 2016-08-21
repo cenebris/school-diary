@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
   end
 
   def update
-    if student.save
+    if student.update_attributes(student_params)
       redirect_to student_path(student), notice: I18n.t('shared.updated', resource: 'Student')
     else
       render :edit
