@@ -9,8 +9,7 @@ Hi! We think it’s great that you want to start learning **Ruby on Rails**. Tak
 -------------
 Simple application for managing school subjects, teaching staff and students.
 
-Don't know how sth should work?
-Check it out [http://ror-workshops.herokuapp.com/](http://ror-workshops.herokuapp.com/)
+Working demo - [http://ror-workshops.herokuapp.com/](http://ror-workshops.herokuapp.com/)
 
 ### :closed_lock_with_key: Technology stack
 -------------
