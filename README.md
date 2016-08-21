@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cenebris/school-diary.svg?branch=master)](https://travis-ci.org/cenebris/school-diary)
+
 RoR Workshops
 ================
 
